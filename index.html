@@ -56,7 +56,24 @@
 
   <section id="like">
     <h1>Like</h1>
-    <button onclick="alert('Thank you for liking Einstein!')">Like Me</button>
+   <div class="like-container">
+  <button id="likeButton" class="like-btn">Like Me</button>
+  <p id="likeCount">Likes: 0</p>
+</div>
+
+<script>
+  const likeButton = document.getElementById('likeButton');
+  const likeCountDisplay = document.getElementById('likeCount');
+
+  let likeCount = localStorage.getItem('likeCountEinstein') || 0;
+  likeCountDisplay.textContent = `Likes: ${likeCount}`;
+
+  likeButton.addEventListener('click', () => {
+    likeCount++;
+    likeCountDisplay.textContent = `Likes: ${likeCount}`;
+    localStorage.setItem('likeCountEinstein', likeCount);
+  });
+</script>
   </section>
 
   <section id="qr-code">
