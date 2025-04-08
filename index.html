@@ -56,58 +56,9 @@
 
   <section id="like">
     <h1>Like</h1>
-   <div class="like-container">
-  <div class="like-container">
-  <button id="likeButton" class="like-btn">Like Me</button>
-  <p id="likeCount">Likes: 0</p>
-</div>
-
-<script>
-  const likeButton = document.getElementById('likeButton');
-  const likeCountDisplay = document.getElementById('likeCount');
-
-  let likeCount = localStorage.getItem('likeCountEinstein') || 0;
-  likeCountDisplay.textContent = `Likes: ${likeCount}`;
-
-  likeButton.addEventListener('click', () => {
-    likeCount++;
-    likeCountDisplay.textContent = `Likes: ${likeCount}`;
-    localStorage.setItem('likeCountEinstein', likeCount);
-  });
-</script>
-
-  <p id="likeCount">Likes: 0</p>
-</div>
-
-<script>
-  const likeButton = document.getElementById('likeButton');
-  const likeCountDisplay = document.getElementById('likeCount');
-
-  let likeCount = localStorage.getItem('likeCountEinstein') || 0;
-  likeCountDisplay.textContent = `Likes: ${likeCount}`;
-
-  likeButton.addEventListener('click', () => {
-    likeCount++;
-    likeCountDisplay.textContent = `Likes: ${likeCount}`;
-    localStorage.setItem('likeCountEinstein', likeCount);
-  });
-</script>
+    <button onclick="alert('Thank you for liking Einstein!')">Like Me</button>
   </section>
 
-  <div class="fb-like" 
-     data-href="https://www.facebook.com/NASA/" 
-     data-width="" 
-     data-layout="standard" 
-     data-action="like" 
-     data-size="large" 
-     data-share="true">
-</div>
-
-<script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
-</script>
-
-  
   <section id="qr-code">
     <h1>QR Code</h1>
     <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://en.wikipedia.org/wiki/Albert_Einstein&size=150x150" alt="Einstein QR Code" />
@@ -115,24 +66,23 @@
 
   <section id="qa">
     <h1>SPA Q&A</h1>
+  
     <details>
-      <summary>What is your most famous formula?</summary>
-      <p>E = mc², which expresses the equivalence of mass and energy.</p>
+      <summary>פרטו שלושה הבדלים עיקריים בין Web 1.0, Web 2.0 ו-Web 3.0</summary>
+      <p>1. Web 1.0 - האינטרנט היה סטטי: אתרים הציגו מידע קבוע, ללא אפשרות תגובה של המשתמשים.</p>
+      <p>2. Web 2.0 - האינטרנט הפך לדינמי: המשתמשים יכולים ליצור ולשתף תוכן (למשל פייסבוק, יוטיוב).</p>
+      <p>3. Web 3.0 - האינטרנט הופך לביזורתי: מבוסס על בלוקצ'יין, ללא תלות בגורם מרכזי, עם דגש על פרטיות ושליטה אישית בנתונים.</p>
     </details>
+  
     <details>
-      <summary>Did you always do well in school?</summary>
-      <p>Not always! I excelled in math and physics but disliked rote learning.</p>
-    </details>
-    <details>
-      <summary>What hobbies did you have?</summary>
-      <p>I loved playing the violin and sailing.</p>
-    </details>
-    <details>
-      <summary>What is a fun fact about you?</summary>
-      <p>My brain was studied after I died to understand my genius!</p>
+      <summary>הסבירו את ההבדלים באמצעות דוגמה של תרחיש שימוש</summary>
+      <p>חיפוש "תופעות לוואי של תרופות":</p>
+      <p>ב-Web 1.0 - מוצאים עמוד סטטי עם מידע קבוע, ללא אפשרות לשאול שאלות או לקבל עדכונים.</p>
+      <p>ב-Web 2.0 - מוצאים פורומים, בלוגים ורשתות חברתיות שבהם אנשים משתפים חוויות אישיות.</p>
+      <p>ב-Web 3.0 - מנוע חיפוש מבוזר יאתר מידע מותאם אישית ואמין יותר, בעזרת AI וללא שליטה של גוף מרכזי.</p>
     </details>
   </section>
-
+  
   <section id="contact">
     <h1>Contact Me</h1>
     <form>
