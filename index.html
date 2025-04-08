@@ -56,8 +56,22 @@
 
   <section id="like">
     <h1>Like</h1>
-    <button onclick="alert('Thank you for liking Einstein!')">Like Me</button>
-  </section>
+    <div class="like-container">
+      <button id="likeButton" class="like-btn">Like Me</button>
+      <p id="likeCount">Likes: 0</p>
+    </div>
+  
+
+  <div id="fb-root"></div>
+  <div class="fb-like" 
+       data-href="https://www.facebook.com/AlbertEinsteinOfficial" 
+       data-width="" 
+       data-layout="standard" 
+       data-action="like" 
+       data-size="large" 
+       data-share="true">
+  </div>
+</section>
 
   <section id="qr-code">
     <h1>QR Code</h1>
@@ -98,6 +112,25 @@
       <input type="submit" value="Send" />
     </form>
   </section>
+
+  <script>
+    const likeButton = document.getElementById('likeButton');
+    const likeCountDisplay = document.getElementById('likeCount');
+  
+    let likeCount = localStorage.getItem('likeCountEinstein') || 0;
+    likeCountDisplay.textContent = `Likes: ${likeCount}`;
+  
+    likeButton.addEventListener('click', () => {
+      likeCount++;
+      likeCountDisplay.textContent = `Likes: ${likeCount}`;
+      localStorage.setItem('likeCountEinstein', likeCount);
+    });
+  </script>
+  
+
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
+</script>
 
 </body>
 </html>
